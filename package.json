@@ -3,6 +3,16 @@
   "version": "2.1.0",
   "description": "cross-browser way to attach a media stream to a video element.",
   "main": "attachmediastream.js",
+  "exports": {
+    ".": {
+      "import": "./attachmediastream.esm.js",
+      "require": "./attachmediastream.js"
+    },
+    "./attachmediastream.bundle.js": {
+      "import": "./attachmediastream.bundle.js",
+      "require": "./attachmediastream.bundle.js"
+    }
+  },
   "scripts": {
     "build": "node ./build.js",
     "build:esm": "rollup -c"
