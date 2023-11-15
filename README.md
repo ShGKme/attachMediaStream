@@ -4,7 +4,7 @@
 
 A tiny browser module for attaching a media stream to a video (or audio) element with some options. It handles the differences between browsers via [adapter.js](https://github.com/webrtc/adapter).
 
-Suitable for use with browserify/CommonJS on the client. 
+Suitable for use with browserify/CommonJS/ESM on the client.
 
 If you're not using browserify or you want AMD support use `attachmediastream.bundle.js`.
 
@@ -17,6 +17,17 @@ npm install attachmediastream
 
 ## How to use it
 
+Import on a CJS client:
+
+```js
+var attachMediaStream = require('attachmediastream');
+```
+
+Or on a ESM client:
+
+```js
+import attachMediaStream from 'attachmediastream';
+```
 
 Makes it easy to attach video streams to video tags.
 

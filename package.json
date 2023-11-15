@@ -3,6 +3,20 @@
   "version": "2.1.0",
   "description": "cross-browser way to attach a media stream to a video element.",
   "main": "attachmediastream.js",
+  "exports": {
+    ".": {
+      "import": "./attachmediastream.esm.js",
+      "require": "./attachmediastream.js"
+    },
+    "./attachmediastream.bundle.js": {
+      "import": "./attachmediastream.bundle.js",
+      "require": "./attachmediastream.bundle.js"
+    }
+  },
+  "scripts": {
+    "build": "node ./build.js",
+    "build:esm": "rollup -c"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/HenrikJoreteg/attachMediaStream"
@@ -20,7 +34,9 @@
     "webrtc-adapter": "^4.0.0"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
     "browserify": "2.x",
+    "rollup": "^4.4.1",
     "webrtc-adapter": "^4.0.0"
   }
 }
