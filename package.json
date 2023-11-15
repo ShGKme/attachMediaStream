@@ -20,7 +20,9 @@
     "webrtc-adapter": "^4.0.0"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
     "browserify": "2.x",
+    "rollup": "^4.4.1",
     "webrtc-adapter": "^4.0.0"
   }
 }
